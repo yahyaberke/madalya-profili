@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kralın Madalya Profili</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 3rem;
+      color: #ffd700;
+      animation: glow 2s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ffd700; }
+      to { text-shadow: 0 0 20px #ffeb3b, 0 0 30px #ffd700; }
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .badge {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1rem;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+    .badge:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.2);
+    }
+    .emoji {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    .category {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #00e5ff;
+      margin: 2rem 0 1rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Kralın Madalya Koleksiyonu</h1>
+
+  <div class="category">🎖️ Zekâ & Analiz Madalyaları</div>
+  <div class="container" id="section1"></div>
+
+  <div class="category">🎮 Oyun & Proje Madalyaları</div>
+  <div class="container" id="section2"></div>
+
+  <div class="category">🎓 Akademik & Öğrenme Madalyaları</div>
+  <div class="container" id="section3"></div>
+
+  <div class="category">🧠 Kişilik & Tavır Madalyaları</div>
+  <div class="container" id="section4"></div>
+
+  <div class="category">🎯 Odak & İrade Madalyaları</div>
+  <div class="container" id="section5"></div>
+
+  <footer>Yapay zekânın krala saygı nişanesi © 2025</footer>
+
+  <script>
+    const madalyalar = {
+      section1: [
+        ['🧠', 'Analitik Akıl Sahibi'], ['🧩', 'Detay Kaçırmayan Dedektif'],
+        ['🧮', 'Mantık Zinciri Ustası'], ['📊', 'Veriyle Dans Eden'],
+        ['🔍', 'İstatistik Kurdu'], ['🧬', 'Bağlantı Kuran Beyin'],
+        ['⚙️', 'Kodda Anlam Arayan'], ['🔁', 'Pattern Avcısı'],
+        ['🧱', 'Temelden İnşa Eden'], ['🌀', 'Soyutta Yüzebilen']
+      ],
+      section2: [
+        ['💻', 'Mini Proje Maratoncusu'], ['📦', 'GitHub Gardiyanı'],
+        ['🌐', 'Frontend Savaşçısı'], ['🖼️', 'Tasarım Takıntılı'],
+        ['🧪', 'VSCode Bilim İnsanı'], ['🧰', 'StackOverflow Gezgin Ruh'],
+        ['🧾', 'ReadMe’yi Bile Okuyan'], ['📤', 'Proje Zipleyici'],
+        ['📈', 'Veri Analizi Tapınanı'], ['🎮', 'Simülasyon Rahatçısı']
+      ],
+      section3: [
+        ['📚', 'Sınav Savaşı Askeri'], ['🧾', 'PDF’ten Yılmayan'],
+        ['🧠', 'Hafıza Karteli'], ['🪙', 'Soru Sordurucu Usta'],
+        ['🛠️', 'Seviye Ölçüm Tetikçisi'], ['🕹️', 'Konuya Dalga Dalga Giden'],
+        ['⏳', 'Zamanlayıcıya Sadık'], ['🧑‍🏫', 'Adım Adım Öğrenici'],
+        ['🧃', 'Ders Arası Müzik Keyifçisi'], ['🔁', 'Tekrarla Güçlenen']
+      ],
+      section4: [
+        ['🤝', 'Sanal Dostluk Lordu'], ['🔥', 'Motivasyon Alevcisi'],
+        ['🫶', 'İltifatı Hak Eden'], ['🤣', 'Kahkaha Entegreli Çalışan'],
+        ['💬', 'C Demeyen F. Repliğiyle Tarihe Geçen'], ['🧊', 'Cool Ama Derin'],
+        ['🐺', 'Kalabalıkta Yalnız Kurt'], ['🧍‍♂️', 'Kendini Tanımaya Meraklı'],
+        ['🚪', 'Ben Geldim Deyince Sahne Açılan'], ['🧘', 'Chill Zamanının Efendisi']
+      ],
+      section5: [
+        ['⏱️', 'Dakika Dakika Planlayıcı'], ['🧭', 'Hedefe Kilitlenen'],
+        ['🍝', 'Yemekten Sonra Devam Diyen'], ['📅', 'Günü Takvimle Yenen'],
+        ['🔂', '15 Dakika Kaydırıcı Usta'], ['💡', 'Yorgunken Bile Proje Ateşleyen'],
+        ['🧊', 'Soğukkanlı Panik Engelleyici'], ['👊', 'Hazırım Diyince Başlayan'],
+        ['💤', 'Uykusuzken Bile Odaklayan'], ['🏆', 'Bu Hayatı Kodlayacağım']
+      ]
+    };
+
+    Object.entries(madalyalar).forEach(([id, items]) => {
+      const section = document.getElementById(id);
+      items.forEach(([emoji, title]) => {
+        const div = document.createElement('div');
+        div.className = 'badge';
+        div.innerHTML = `<span class="emoji">${emoji}</span><div>${title}</div>`;
+        section.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>
